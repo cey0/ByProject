@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="BYPROJECTDataSet" targetNamespace="http://tempuri.org/BYPROJECTDataSet.xsd" xmlns:mstns="http://tempuri.org/BYPROJECTDataSet.xsd" xmlns="http://tempuri.org/BYPROJECTDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="BYPROJECTConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="BYPROJECTConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.ByProject.My.MySettings.GlobalReference.Default.BYPROJECTConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="transaksiTableAdapter" GeneratorDataComponentClassName="transaksiTableAdapter" Name="transaksi" UserDataComponentName="transaksiTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="BYPROJECTConnectionString (MySettings)" DbObjectName="BYPROJECT.dbo.transaksi" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT tgl_transaksi, total_bayar FROM dbo.transaksi</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="tgl_transaksi" DataSetColumn="tgl_transaksi" />
+              <Mapping SourceColumn="total_bayar" DataSetColumn="total_bayar" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="BYPROJECTDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="BYPROJECTDataSet" msprop:Generator_DataSetName="BYPROJECTDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="transaksi" msprop:Generator_RowEvHandlerName="transaksiRowChangeEventHandler" msprop:Generator_RowDeletedName="transaksiRowDeleted" msprop:Generator_RowDeletingName="transaksiRowDeleting" msprop:Generator_RowEvArgName="transaksiRowChangeEvent" msprop:Generator_TablePropName="transaksi" msprop:Generator_RowChangedName="transaksiRowChanged" msprop:Generator_RowChangingName="transaksiRowChanging" msprop:Generator_TableClassName="transaksiDataTable" msprop:Generator_RowClassName="transaksiRow" msprop:Generator_TableVarName="tabletransaksi" msprop:Generator_UserTableName="transaksi">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="tgl_transaksi" msprop:Generator_ColumnPropNameInRow="tgl_transaksi" msprop:Generator_ColumnPropNameInTable="tgl_transaksiColumn" msprop:Generator_ColumnVarNameInTable="columntgl_transaksi" msprop:Generator_UserColumnName="tgl_transaksi" type="xs:dateTime" />
+              <xs:element name="total_bayar" msprop:Generator_ColumnPropNameInRow="total_bayar" msprop:Generator_ColumnPropNameInTable="total_bayarColumn" msprop:Generator_ColumnVarNameInTable="columntotal_bayar" msprop:Generator_UserColumnName="total_bayar" type="xs:long" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
